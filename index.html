@@ -5,6 +5,7 @@
   window.onload = function(){
     document.cookie = "example_cookie=example_value;SameSite=None;Secure";
     const iframe = document.getElementById("cookie-iframe");
+    iframe.style.backgroundColor = "red";
     iframe.contentWindow.postMessage({ cookies: document.cookie }, '*');
   }
 </script>
