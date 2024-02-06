@@ -5,10 +5,12 @@
   window.onload = function(){
     document.cookie = "example_cookie=example_value";
   }
+  const iframe = document.getElementById("cookie-iframe");
+  iframe.contentWindow.postMessage({ cookies: document.cookie }, '*');
 </script>
 </head>
 <body>
   <div>COOKIE TEST</div>
-  <iframe src="https://65c24bfdac27af1a9b3e7143--secondarycookietest.netlify.app/" title="cookietest2"></iframe>
+  <iframe src="https://65c24bfdac27af1a9b3e7143--secondarycookietest.netlify.app/" title="cookietest2" id="cookie-iframe"></iframe>
 </body>
 </html>
