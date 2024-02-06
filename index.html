@@ -3,7 +3,7 @@
 <title>cookie test</title>
 <script>
   window.onload = function(){
-    document.cookie = "example_cookie=example_value,SameSite=None;Secure";
+    document.cookie = "example_cookie=example_value;SameSite=None;Secure";
     const iframe = document.getElementById("cookie-iframe");
     iframe.contentWindow.postMessage({ cookies: document.cookie }, '*');
   }
