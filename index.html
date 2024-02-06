@@ -6,6 +6,7 @@
     document.cookie = "example_cookie=example_value;SameSite=None;Secure=true";
     const iframe = document.getElementById("cookie-iframe");
     iframe.style.backgroundColor = "red";
+    console.log(document.cookie)
     iframe.contentWindow.postMessage({ cookies: document.cookie }, '*');
   }
 </script>
